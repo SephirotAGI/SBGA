@@ -1,0 +1,10 @@
+\babel@toc {brazil}{}\relax
+\contentsline {section}{\numberline {1}Introdução}{1}{section.1}%
+\contentsline {section}{\numberline {2}Diagnóstico: A Crise Brasileira}{2}{section.2}%
+\contentsline {section}{\numberline {3}Arquitetura Técnica do SBGA}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Os 4 Pilares}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Token Virtude (TV): A Moeda do Mérito}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Smart Contracts Anticorrupção}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Impacto Esperado}{3}{section.4}%
+\contentsline {section}{\numberline {5}Riscos e Mitigações}{4}{section.5}%
+\contentsline {section}{\numberline {6}Conclusão}{4}{section.6}%

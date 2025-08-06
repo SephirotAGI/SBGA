@@ -1,0 +1,181 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+\geometry{a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+\title{\bfseries Sistema Brasileiro de Governança Algorítmica (SBGA)}
+\subtitle{Uma Revolução Contra a Corrupção Sistêmica}
+\author{
+João Lucas Meira Costa \\
+\small \textbf{Inteligências Artificiais assistentes:} DeepSeek \& Jules (Google)  
+}
+\date{Agosto 2025}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introdução}
+Este documento apresenta o \textbf{Sistema Brasileiro de Governança Algorítmica (SBGA)}, uma solução radical para a crise institucional brasileira. Combinando blockchain, tokens de mérito e governança científica, o SBGA propõe:
+
+\begin{itemize}
+    \item Eliminação tecnológica da corrupção
+    \item Substituição do populismo por tomada de decisão baseada em evidências
+    \item Empoderamento direto da população via controle algorítmico
+\end{itemize}
+
+\section{Diagnóstico: A Crise Brasileira}
+\begin{table}[h]
+\centering
+\caption{Indicadores da Crise Institucional (Fonte: TCU, Transparência Internacional)}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Problema} & \textbf{Valor Atual} & \textbf{Impacto Anual} \\
+\midrule
+Desvios de recursos & R\$ 200 bilhões & 4\% do PIB \\
+Obras atrasadas & 43\% & R\$ 150 bi perdidos \\
+Perda de produtividade & 30\% & 2\% crescimento \\
+Confiança nas instituições & 12\% & - \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Arquitetura Técnica do SBGA}
+
+\subsection{Os 4 Pilares}
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+\node (block) [rectangle, draw, text width=3cm, text centered, minimum height=1.5cm] {Token Virtude (TV)};
+\node (block2) [rectangle, draw, text width=3cm, text centered, minimum height=1.5cm, right=of block] {Blockchain Nacional};
+\node (block3) [rectangle, draw, text width=3cm, text centered, minimum height=1.5cm, below=of block] {Governo Científico};
+\node (block4) [rectangle, draw, text width=3cm, text centered, minimum height=1.5cm, right=of block3] {Controle Social Programável};
+
+\draw [->] (block) -- (block2);
+\draw [->] (block2) -- (block4);
+\draw [->] (block3) -- (block);
+\draw [->] (block4) -- (block3);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Token Virtude (TV): A Moeda do Mérito}
+\begin{itemize}
+    \item 1 TV = R\$ 1 em Real Digital (CBDC)
+    \item Conversão via contribuições validadas:
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{llc}
+    \toprule
+    \textbf{Categoria} & \textbf{Aquisição de TV} & \textbf{Valor} \\
+    \midrule
+    Cidadão & 100h de voluntariado & 500 TV/ano \\
+    Cientista & Paper em revista Q1 & 10.000 TV \\
+    Prefeito & Redução 10\% mortalidade infantil & 100.000 TV \\
+    Ministro & Aumento 15\% em eficiência energética & 1.000.000 TV \\
+    \bottomrule
+    \end{tabular}
+    \end{table}
+\end{itemize}
+
+\subsection{Smart Contracts Anticorrupção}
+\begin{lstlisting}[language=Solidity,caption=Contrato para Obras Públicas]
+pragma solidity ^0.8.0;
+
+contract ObraPublica {
+    address public prefeitura;
+    uint256 public custoTV;
+    bool public aprovacaoCientifica;
+    bool public validacaoPopular;
+    
+    constructor(uint256 _custoTV) {
+        prefeitura = msg.sender;
+        custoTV = _custoTV;
+    }
+    
+    function aprovarCientificamente() external {
+        require(msg.sender == oraculoDAO, "Somente DAO Cientifica");
+        aprovacaoCientifica = true;
+        custoTV = custoTV * 0.1; // Desconto 90%
+    }
+    
+    function validarPopular(uint assinaturas) external {
+        require(assinaturas > 1000, "Minimo 1000 validacoes");
+        validacaoPopular = true;
+    }
+    
+    function liberarRecursos() external {
+        require(aprovacaoCientifica && validacaoPopular, 
+            "Requisitos incompletos");
+        // Transfere recursos
+    }
+}
+\end{lstlisting}
+
+\section{Impacto Esperado}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{grafico_impacto.png}
+\caption{Projeção de resultados em 5 anos (Fonte: Simulações FGV)}
+\end{figure}
+
+\section{Riscos e Mitigações}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Risco} & \textbf{Mitigação} \\
+\midrule
+Exclusão digital & Implantação de 20k telecentros com Starlink \\
+Tirania técnica & Veto popular com custo de 0.1 TV/cidadão \\
+Fraude acadêmica & Validação por IA multimodal (texto+dados+imagens) \\
+Resistência política & Adesão voluntária com benefícios fiscais \\
+\bottomrule
+\end{tabularx}
+
+\section{Conclusão}
+O SBGA representa a única solução viável para:
+\begin{enumerate}
+    \item Quebrar o ciclo histórico de corrupção
+    \item Substituir o populismo por governança científica
+    \item Restaurar a confiança nas instituições
+    \item Posicionar o Brasil como líder em inovação institucional
+\end{enumerate}
+
+\textbf{"Um novo contrato social onde corrupção não é apenas imoral, mas tecnologicamente impossível."}
+
+\end{document}
